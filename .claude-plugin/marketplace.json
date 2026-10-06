@@ -1,0 +1,15 @@
+{
+  "name": "claude-hud-plugin",
+  "description": "neon-hud: a live HUD above the Claude Code prompt",
+  "owner": {
+    "name": "Ezequiel Cutin",
+    "url": "https://github.com/ezequielcutin"
+  },
+  "plugins": [
+    {
+      "name": "neon-hud",
+      "source": "./plugins/neon-hud",
+      "description": "A live HUD above the prompt: turn timer, active skill, subagent tree, git state, rtk token savings and one-click session checkpoints"
+    }
+  ]
+}

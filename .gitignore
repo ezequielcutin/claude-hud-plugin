@@ -1,0 +1,4 @@
+# Written by Claude Code when it loads the mod (editor types); regenerated on every load
+plugins/*/.claude-plugin/types/
+.DS_Store
+node_modules/

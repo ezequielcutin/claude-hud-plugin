@@ -1,0 +1,47 @@
+{
+  "name": "neon-hud",
+  "version": "0.1.0",
+  "description": "A live HUD above the prompt: turn timer, active skill, subagent tree, git state, rtk token savings and one-click session checkpoints",
+  "author": {
+    "name": "Ezequiel Cutin",
+    "url": "https://github.com/ezequielcutin"
+  },
+  "homepage": "https://github.com/ezequielcutin/claude-hud-plugin",
+  "repository": "https://github.com/ezequielcutin/claude-hud-plugin",
+  "license": "MIT",
+  "keywords": ["mod", "hud", "statusline", "subagents", "rtk", "checkpoint"],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "hidden_segments": {
+      "type": "string",
+      "title": "Segments hidden at start",
+      "description": "Comma-separated: turn, skill, agents, git, rtk. /hud <segment> still toggles them in a session.",
+      "default": ""
+    },
+    "timezone": {
+      "type": "string",
+      "title": "Checkpoint timestamps",
+      "description": "Time zone for checkpoint file names and headers: your machine's local time, UTC, or US Eastern.",
+      "options": ["local", "utc", "us-eastern"],
+      "default": "local"
+    },
+    "checkpoint_dir": {
+      "type": "string",
+      "title": "Checkpoint folder",
+      "description": "Where /hud checkpoint saves handoff docs, relative to your home directory.",
+      "default": ".claude/checkpoints"
+    },
+    "rtk_path": {
+      "type": "string",
+      "title": "rtk binary (optional)",
+      "description": "Path to rtk. Leave blank to look in the usual install locations; the rtk segment hides itself when rtk isn't found.",
+      "default": ""
+    },
+    "rtk_db": {
+      "type": "string",
+      "title": "rtk history database (optional)",
+      "description": "Path to rtk's history.db. Leave blank to use rtk's default location for your OS.",
+      "default": ""
+    }
+  }
+}
